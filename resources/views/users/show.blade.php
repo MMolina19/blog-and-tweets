@@ -29,11 +29,11 @@
                     <ul>
                         @foreach($entries as $entry)
                         <li>
-                            @if ($user->id === auth()->id())
-                            <a href="{{ url('entries/'.$entry->id) }}"> {{ $entry->title }} </a>
-                            @else
-                            {{ $entry->title }}
-                            @endif
+                            <!-- if ($user->id === auth()->id()) -->
+                            <a href="{{ $entry->getUrl() }}"> {{ $entry->title }} </a>
+                            <!-- else -->
+                            <!-- { $entry->title } -->
+                            <!-- endif -->
 
                         </li>
                         @endforeach
