@@ -29,9 +29,7 @@
                     <ul>
                         @foreach($entries as $entry)
                         <li>
-                            @can ('update', $entry)
                             <a href="{{ $entry->getUrl() }}"> {{ $entry->title }} </a>
-                            @endcan
                         </li>
                         @endforeach
                     </ul>
