@@ -29,12 +29,9 @@
                     <ul>
                         @foreach($entries as $entry)
                         <li>
-                            <!-- if ($user->id === auth()->id()) -->
+                            @can ('update', $entry)
                             <a href="{{ $entry->getUrl() }}"> {{ $entry->title }} </a>
-                            <!-- else -->
-                            <!-- { $entry->title } -->
-                            <!-- endif -->
-
+                            @endcan
                         </li>
                         @endforeach
                     </ul>
